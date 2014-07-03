@@ -3,5 +3,5 @@
 /deps
 erl_crash.dump
 *.ez
-spawndir
+/spawndir
 .projectile
