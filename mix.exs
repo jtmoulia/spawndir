@@ -6,8 +6,13 @@ defmodule SpawnDir.Mixfile do
 
   def project do
     [app: :spawndir,
-     version: "0.0.1",
+     description: File.read!("README.md"),
+     contributors: ["Thomas Moulia <jtmoulia@pocketknife.io>"],
+     licenses: ["The BSD 3-Clause License"],
+     links: %{github: "https://github.com/jtmoulia/spawndir"},
+     version: "0.1.0",
      elixir: "~> 0.14.2",
+     deps: deps,
      escript: escript
     ]
   end
@@ -18,7 +23,12 @@ defmodule SpawnDir.Mixfile do
      env: [test_dir: @test_dir]]
   end
 
-  def escript do
+  defp deps do
+    [#{:exactor, git: "https://github.com/sasa1977/exactor.git", tag: "0.5.0"},
+     {:exrm, "~> 0.10.3"}]
+  end
+
+  defp escript do
     [main_module: SpawnDir]
   end
 

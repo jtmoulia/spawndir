@@ -35,3 +35,5 @@ environment variables:
 - Check for executable flag
 - Package installation
 - Monitor filesystem for commands being added/removed
+
+Copyright (c) Thomas Moulia, 2014

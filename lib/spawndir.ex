@@ -11,6 +11,10 @@ defmodule SpawnDir do
   @doc """
   Escript executable entry point.
   """
+  def main([]) do
+    IO.puts "usage: spawndir DIR [ARGS ...]"
+  end
+
   def main([root | args]) do
     start!
     add root, args: args
