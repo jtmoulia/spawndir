@@ -6,14 +6,14 @@ defmodule SpawnDir.Mixfile do
 
   def project do
     [app: :spawndir,
-     description: File.read!("README.md"),
-     contributors: ["Thomas Moulia <jtmoulia@pocketknife.io>"],
-     licenses: ["The BSD 3-Clause License"],
-     links: %{github: "https://github.com/jtmoulia/spawndir"},
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 0.14.2",
      deps: deps,
-     escript: escript
+     escript: escript,
+     description: File.read!("README.md"),
+     package: [licenses: ["The BSD 3-Clause License"],
+               contributors: ["Thomas Moulia <jtmoulia@pocketknife.io>"],
+               links: [github: "https://github.com/jtmoulia/spawndir"]]
     ]
   end
 
