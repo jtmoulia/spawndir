@@ -1,0 +1,7 @@
+/var
+/_build
+/deps
+erl_crash.dump
+*.ez
+spawndir
+.projectile
