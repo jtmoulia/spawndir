@@ -17,7 +17,7 @@ defmodule TestHelper do
 
   def kill_watcher_port(port) do
     os_pid = Watcher.Port.get_os_pid! port
-    System.cmd "kill #{os_pid}"
+    System.cmd "kill", ["#{os_pid}"]
   end
 end
 

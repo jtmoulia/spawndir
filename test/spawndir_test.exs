@@ -23,6 +23,7 @@ defmodule SpawnDirTest do
   test "spawndir add", %{dir: dir} do
     SpawnDir.add dir
     :timer.sleep 20  # Pause to allow children to spawn
+          IO.puts(inspect(Supervisor.count_children(Watcher.Supervisor)));
     assert Supervisor.count_children(Watcher.Supervisor)[:active] == 3
   end
 

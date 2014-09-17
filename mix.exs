@@ -7,7 +7,7 @@ defmodule SpawnDir.Mixfile do
   def project do
     [app: :spawndir,
      version: "0.1.1",
-     elixir: "~> 0.14.2",
+     elixir: "~> 1.0.0",
      deps: deps,
      escript: escript,
      description: File.read!("README.md"),
