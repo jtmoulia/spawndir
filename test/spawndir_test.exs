@@ -3,7 +3,7 @@ defmodule SpawnDirTest do
   use Bitwise
 
   @dir Application.get_env :spawndir, :test_dir, Path.join("var", "test")
-  @default_mode 0777
+  @default_mode 0o777
   @default_content "#!/bin/bash\nsleep 10"
   @tree ["cmd1", "cmd2", {"subdir", ["subcmd1"]}]
 
@@ -41,7 +41,7 @@ defmodule SpawnDirTest do
                   path, default_content, default_mode, acc) when is_binary(content) do
     cmd_path = Path.join path, cmd
     File.write! cmd_path, default_content
-    File.chmod! cmd_path, default_mode
+    File.chmod cmd_path, default_mode
     build_tree(rest, path, default_content, default_mode, [path | acc])
   end
 
