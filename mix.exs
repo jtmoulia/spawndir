@@ -13,7 +13,7 @@ defmodule SpawnDir.Mixfile do
      description: File.read!("README.md"),
      package: [licenses: ["The BSD 3-Clause License"],
                contributors: ["Thomas Moulia <jtmoulia@pocketknife.io>"],
-               links: [github: "https://github.com/jtmoulia/spawndir"]]
+               links: %{"github" => "https://github.com/jtmoulia/spawndir"}]
     ]
   end
 
